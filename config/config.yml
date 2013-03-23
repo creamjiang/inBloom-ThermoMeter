@@ -1,2 +1,5 @@
 defaults: &defaults
   dummyVar:
+
+development: &development
+  <<: *defaults
