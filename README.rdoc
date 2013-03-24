@@ -18,7 +18,7 @@ To use this app you will need to export environment variables
    (optional)
    export TWILIO_PHONES=list of phone numbers if evaluation twilio account e.g. ['+11112223333']
 
- You may also store these as YML in a file called .credentials.yml (this file should not be shared or in git)
+ You may also store these as YML in a file called `.credentials.yml` (this file should not be shared or in git)
 
 
 When you create an application as described in "registering your application" at http://dev.slcedu.org/getting-started/creating-sandbox-account
