@@ -38,8 +38,10 @@
         <td>
           <span class="sparklines grades" data-values="<%= student.grades.join(',') %>"></span>
         </td>
-        <td width="100%" class="hide alert-button">
-          <a href="#" class="btn">Alert Parents</a>
+        <td class="alert-button">
+          <% if student.average_grade < 65 %>
+              <a href="#" class="btn">Alert Parents</a>
+          <% end %>
         </td>
       </tr>
   <% end %>
@@ -62,7 +64,6 @@
         $(this).find(".ui-progressbar-value").addClass("averageGrade");
       } else if (progVal <= 65){
         $(this).find(".ui-progressbar-value").addClass("lowGrade");
-        $(this).parent().parent().find(".alert-button").removeClass("hide");
       }
 
     });
