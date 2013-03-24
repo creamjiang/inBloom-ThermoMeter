@@ -34,6 +34,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def href_for(item, rel)
+    item.links.find {|item| item.rel == rel.to_s}.href
+  end
+  helper_method :href_for
+
   def hashie_from_json(json_data)
     hash = JSON.parse json_data
     hashie_from_hash(hash)

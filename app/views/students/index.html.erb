@@ -1,7 +1,18 @@
-<% if current_user %>
-  Welcome <%= current_user.name %>!
-  <%= link_to "Sign Out", signout_path %>
-  <p><%= @slc_request %>
-<% else %>
-  <%= link_to "Sign in with Slc", "/auth/slc" %>
-<% end %>
+<h1>Students for <%= @student_container.uniqueSectionCode %> </h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @students.each do |student| %>
+      <tr>
+        <td><%= student.name.lastSurname %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br />
+<%=  debug @students %>
