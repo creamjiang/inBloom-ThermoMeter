@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
   end
 
   def href_for(item, rel)
-    item.links.find {|item| item.rel == rel}.href
+    item.links.find {|item| item.rel == rel.to_s}.href
   end
   helper_method :href_for
 
