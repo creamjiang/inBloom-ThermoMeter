@@ -1,0 +1,20 @@
+<h1>Listing klasses</h1>
+
+<table>
+  <tr>
+    <th>Class Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @klasses.each do |klass| %>
+  <tr>
+    <td><%= klass.uniqueSectionCode %></td>
+    <td><%= link_to 'Students', students_path(:root_link => href_for(klass, 'self')) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%=  debug @klasses %>
+

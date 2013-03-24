@@ -23,6 +23,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'hashie'
 gem 'jquery-rails'
 gem 'debugger'
 

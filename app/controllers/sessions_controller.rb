@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
+  skip_before_filter :ensure_user
 
   def create
-    debugger
     auth = request.env["omniauth.auth"]
     session[:token] = auth[:credentials][:token]
     puts session[:token]
