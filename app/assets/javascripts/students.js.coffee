@@ -7,7 +7,7 @@ jQuery ->
     performanceColor: gradeColor($(this).data('grade')),
     targetColor: 'orange',
     rangeColors: ['#CCFFCC', '#FFFF99', '#FF9999'],
-    width: '200px'
+    width: '300px'
   })
   # performanceColor is assigned in tag
   $('.sparklines.average_score2').sparkline('html', {
@@ -17,12 +17,12 @@ jQuery ->
     height: '30px',
     targetColor: 'orange',
     rangeColors: ['#CCFFCC', '#FFFF99', '#FF9999'],
-    width: '200px'
+    width: '300px'
   })
   $('.sparklines.grades').sparkline('html', {
     tagValuesAttribute: 'data-values',
     height: '30px',
-    width: '200px'
+    width: '100px'
   })
 
 gradeColor = (grade) ->
