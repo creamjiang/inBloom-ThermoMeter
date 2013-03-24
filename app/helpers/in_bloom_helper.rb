@@ -46,11 +46,7 @@ module InBloomHelper
       entries_for_student = gradebook_entries.select { |entry| entry.studentId == student.id }
       grades = entries_for_student.collect { |entry| entry.numericGradeEarned || numeric_grade_for(entry.letterGradeEarned) }.compact
 
-      if grades.empty?
-        average_grade = 0
-      else
-        average_grade = (grades.inject(0.0) { |sum, el| sum + el } / grades.size).round
-      end
+      average_grade = grades.mean
 
       students_with_grades[student.id] = {}
       students_with_grades[student.id][:grades] = grades

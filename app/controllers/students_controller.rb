@@ -17,8 +17,11 @@ class StudentsController < ApplicationController
     #remove students with no grade due to:
     #  BUG: inBloom Section gradebookEntries does not match Student gradebookEntries
     @students = @students.reject {|student| student.average_grade == 0}
-    @section.average_grade = 70
-    @section.average_grades = [70,80,60,70]
+
+    @section.average_grade = @students.collect{|student| student.average_grade}.mean
+    # TODO: mismatched datapoints for students, how to show trend?
+    # TODO: hardcode "sample" trend
+    @section.average_grades = [79,89,69,79]
     @students.sort_by! {|student| student.name.lastSurname}
 
   end
