@@ -30,8 +30,11 @@ gem "twitter-bootstrap-rails"
 gem 'hashie'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'twilio-ruby'
 
 group :development, :test do
+	gem 'hirb'
+	gem 'wirble'
 	gem 'debugger'
 	gem 'rails-footnotes'
 	gem 'thin'
