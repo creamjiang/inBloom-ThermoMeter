@@ -1,12 +1,21 @@
+== inBloom ThermoMeter
+An example app (UPDATE: the winning example app), created during an inBloom Code Camp, at Durham, NC, on March 23-24, 2013.
 
-== Shared Learning Collaborative integration in a Rails App
-This is an example application that integrates with InBloom and shows 'an intervention with communication' application.
+We were tasked to focus on 2 scenarios:
+1. Identification and Intervention
+2. Communicaiton, collaboration, and sharing
 
-To set up a sandbox enviroment for SLC, follow this guide: http://dev.slcedu.org/getting-started/creating-sandbox-account
+This is an example application that integrates with InBloom's api and shows 'an intervention with communication' application.
 
-It uses some of the strategies in Ryan Bate's Railscast #241 Simple OmniAuth: http://railscasts.com/episodes/241-simple-omniauth.
+We worked to create a simple visualization to help the teacher
+identify which students need assitance,
+using point-in-time and trending data from assessment results.
+Emphasis on simple.
+The teacher wanted to get an idea of a student's progress at a glance.
 
 === Setup
+
+To set up a sandbox enviroment for SLC, follow this guide: http://dev.slcedu.org/getting-started/creating-sandbox-account
 
 To use this app you will need to export environment variables
    export INBLOOM_KEY=YOUR KEY
@@ -29,9 +38,11 @@ set your callback url to:
 
 Please check with InBloom.org for the latest api uri's.
 
+It uses some of the strategies in Ryan Bate's Railscast #241 Simple OmniAuth: http://railscasts.com/episodes/241-simple-omniauth.
 
 === Bugs
 This was done quickly and is not perfect.  If you notice a bug, please submit an issue, or even better, fix it and submit a Pull Request.
+
 === Contributing
 
 1. Fork it
@@ -41,7 +52,11 @@ This was done quickly and is not perfect.  If you notice a bug, please submit an
 5. Create a new Pull Request
 
 === Credits
-1. khoffman4 https://github.com/khoffma4/omniauth-inbloom - for Shell example application and omniauth strategy for Inbloom
+* Dave Roberts: Educator
+* Sushant Mohanty: Developer
+* Nick Papacostas: Developer
+* Matt Scilipoti: Developer
+* khoffman4: https://github.com/khoffma4/omniauth-inbloom - for Shell example application and omniauth strategy for Inbloom
 
 === Copyright
 2013 LearnZillion.com
