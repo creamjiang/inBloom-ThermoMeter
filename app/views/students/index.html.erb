@@ -1,15 +1,16 @@
-<h1>Students for <%= @student_container.uniqueSectionCode %> </h1>
+<h1>Students for <%= @section.uniqueSectionCode %> </h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
+    <th>Average Grade</th>
     <th></th>
   </tr>
 
   <% @students.each do |student| %>
       <tr>
         <td><%= full_name(student) %></td>
+        <td><%= average_grade(student, @section) %></td>
       </tr>
   <% end %>
 </table>

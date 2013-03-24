@@ -22,9 +22,12 @@ class ApplicationController < ActionController::Base
                "Authorization" => "bearer #{session[:token]}"}
 
     api_call = URI.parse(path)
-    http_method = request.method.underscore.to_sym
-    HTTParty.send(http_method, api_call.to_s, :headers => headers)
+    logger.debug "API start: #{api_call}, :headers => #{headers}"
+    api_start = Time.now
+    result = HTTParty.send(:get, api_call.to_s, :headers => headers)
+    logger.debug "API complete. duration:#{api_start-Time.now}"
   end
+  helper_method :get
 
   private
 
