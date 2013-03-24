@@ -21,6 +21,17 @@ module InBloomHelper
     end
   end
 
+  def grade_color(score)
+    case score
+      when 61..85
+        '#FFFF00' # yellow
+      when 86..100
+        'green'
+      else
+        'red'
+    end
+  end
+
   def student_grades(section, students)
     section_url = href_for(section, :self)
     section_json = get(section_url)
