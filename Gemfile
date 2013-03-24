@@ -29,8 +29,13 @@ gem "twitter-bootstrap-rails"
 
 gem 'hashie'
 gem 'jquery-rails'
-gem 'debugger'
-gem 'rails-footnotes'
+gem 'jquery-ui-rails'
+
+group :development, :test do
+	gem 'debugger'
+	gem 'rails-footnotes'
+	gem 'thin'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

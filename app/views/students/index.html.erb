@@ -9,10 +9,31 @@
 
   <% @students.each do |student| %>
       <tr>
-        <td><%= student.name.lastSurname %></td>
+        <td><%= student.name.lastSurname %></td><td width="100%"><div class="progressBar" data-progress="90"></div></td>
       </tr>
   <% end %>
 </table>
 
 <br />
 <%=  debug @students %>
+
+<script type="text/javascript">
+  jQuery(function(){
+
+    $(".progressBar").each(function(){
+      var progVal = $(this).data("progress");
+      $(this).progressbar({
+        value: progVal
+      });
+      if (progVal > 80){
+        $(this).find(".ui-progressbar-value").addClass("highGrade");
+      } else if ((progVal > 65) && (progVal <= 80) ){
+        $(this).find(".ui-progressbar-value").addClass("averageGrade");
+      } else if (progVal <= 65){
+        $(this).find(".ui-progressbar-value").addClass("lowGrade");
+      }
+
+    });
+
+  });
+</script>
