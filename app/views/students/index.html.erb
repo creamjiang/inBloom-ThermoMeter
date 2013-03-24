@@ -1,7 +1,7 @@
 <h1>Students for <%= @section.uniqueSectionCode %> </h1>
 
 <table>
-  <tr class='overall'>
+  <tr class='overall data'>
     <td>Overall</td>
     <td><%= @section.average_grade %></td>
     <td class='average_score'>
@@ -12,16 +12,17 @@
     </td>
     <td></td>
   </tr>
-  <tr>
+  <tr><td><!-- style hack: gap below overall --></td></tr>
+  <tr class='header'>
     <th>Name</th>
     <th>Average Grade</th>
     <th>Performance</th>
-    <th>Trends</th>
+    <th>Trend</th>
     <th>Actions</th>
   </tr>
 
   <% @students.each do |student| %>
-      <tr class=".student-row">
+      <tr class=".student-row data">
         <td><%= full_name(student) %></td>
         <td><%= student.average_grade %></td>
         <!-- <td width="100%">

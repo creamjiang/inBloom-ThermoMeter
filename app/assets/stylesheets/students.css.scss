@@ -1,9 +1,19 @@
+th {
+  border-bottom:  solid black 1px;
+  background-color: black;
+  color:  white;
+}
+
+tr.data td {
+  border:  dotted lightgray 1px;
+}
+
 td.average_score, td.trends {
   line-height: 30px;
-  width:  300px;
 }
 
 .overall {
+  font-size:  1.2em;
   font-weight: bold;
   border: solid black 2px;
 }
