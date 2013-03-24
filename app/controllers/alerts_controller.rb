@@ -5,7 +5,7 @@ class AlertsController < ApplicationController
     phone = params[:phone] || '+12025551212'
     IbTwilio.send(phone, text)
 
-    flash[:notice] = "Alert sent for #{name}"
+    flash[:notice] = "Alert sent for #{name}."
     redirect_to :back and return
   end
 end
