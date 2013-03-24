@@ -13,6 +13,10 @@ class StudentsController < ApplicationController
       student.average_grade = student_grades[student.id][:average_grade]
       student.grades = student_grades[student.id][:grades]
     end
+
+    #remove students with no grade due to:
+    #  BUG: inBloom Section gradebookEntries does not match Student gradebookEntries
+    @students = @students.reject {|student| student.average_grade == 0}
     @section.average_grade = 70
     @section.average_grades = [70,80,60,70]
     @students.sort_by! {|student| student.name.lastSurname}
