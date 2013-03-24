@@ -38,4 +38,21 @@ class ApplicationController < ActionController::Base
     item.links.find {|item| item.rel == rel}.href
   end
   helper_method :href_for
+
+  def hashie_from_json(json_data)
+    hash = JSON.parse json_data
+    hashie_from_hash(hash)
+  end
+  helper_method :hashie_from_json
+
+  def hashie_from_hash(array_hash)
+    case array_hash
+    when Hash
+      Hashie::Mash.new(array_hash)
+    when Array
+      array_hash.map{|ah| hashie_from_hash(ah)}
+    else
+      raise "Unrecognized type for Hashie"
+    end
+  end
 end
