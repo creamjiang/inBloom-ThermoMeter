@@ -140,6 +140,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
+  hashie
   httparty
   jquery-rails
   omniauth-slc (= 0.0.2)

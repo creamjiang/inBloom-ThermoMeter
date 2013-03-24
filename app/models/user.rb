@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :provider, :uid
   
   def self.create_with_omniauth(auth)
-  	debugger
     create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
