@@ -1,7 +1,14 @@
+table tbody tr:nth-child(2n+2) td {
+  background-color: #EBF5FF;
+}
 th {
   border-bottom:  solid black 1px;
   background-color: black;
   color:  white;
+}
+
+th.name {
+  min-width: 200px;
 }
 
 tr.data td {
