@@ -7,6 +7,10 @@ th {
   color:  white;
 }
 
+th.name {
+  min-width: 200px;
+}
+
 tr.data td {
   border:  dotted lightgray 1px;
 }
