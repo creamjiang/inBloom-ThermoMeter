@@ -9,7 +9,7 @@
 
   <% @students.each do |student| %>
       <tr>
-        <td><%= student.name.lastSurname %></td>
+        <td><%= full_name(student) %></td>
       </tr>
   <% end %>
 </table>

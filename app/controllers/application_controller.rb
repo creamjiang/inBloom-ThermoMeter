@@ -34,6 +34,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # introspects item's links for rel, returns href
   def href_for(item, rel)
     item.links.find {|item| item.rel == rel}.href
   end
