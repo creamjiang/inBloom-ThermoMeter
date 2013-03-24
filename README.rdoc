@@ -12,6 +12,13 @@ It uses some of the strategies in Ryan Bate's Railscast #241 Simple OmniAuth: ht
 To use this app you will need to export environment variables
    export INBLOOM_KEY=YOUR KEY
    export INBLOOM_SECRET=YOUR SECRET
+   export TWILIO_SID=twilio-sid
+   export TWILIO_TOKEN=twilio-token
+
+   (optional)
+   export TWILIO_PHONES=list of phone numbers if evaluation twilio account e.g. ['+11112223333']
+
+ You may also store these as YML in a file called .credentials.yml (this file should not be shared or in git)
 
 
 When you create an application as described in "registering your application" at http://dev.slcedu.org/getting-started/creating-sandbox-account

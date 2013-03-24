@@ -33,6 +33,8 @@ gem 'jquery-ui-rails'
 gem 'twilio-ruby'
 
 group :development, :test do
+	gem 'hirb'
+	gem 'wirble'
 	gem 'debugger'
 	gem 'rails-footnotes'
 	gem 'thin'
