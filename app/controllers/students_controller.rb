@@ -15,6 +15,7 @@ class StudentsController < ApplicationController
     end
     @section.average_grade = 70
     @section.average_grades = [70,80,60,70]
+    @students.sort_by! {|student| student.name.lastSurname}
 
   end
 
