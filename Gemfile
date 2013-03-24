@@ -25,6 +25,7 @@ end
 
 gem 'hashie'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'debugger'
 gem 'rails-footnotes'
 
