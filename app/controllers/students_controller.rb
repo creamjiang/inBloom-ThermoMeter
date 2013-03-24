@@ -13,7 +13,8 @@ class StudentsController < ApplicationController
       student.average_grade = student_grades[student.id][:average_grade]
       student.grades = student_grades[student.id][:grades]
     end
-    @students
+    @section.average_grade = 70
+    @section.average_grades = [70,80,60,70]
 
   end
 
