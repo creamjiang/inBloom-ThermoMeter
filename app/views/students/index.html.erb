@@ -1,17 +1,18 @@
-<h1>Students for <%= @student_container.uniqueSectionCode %> </h1>
+<h1>Students for <%= @section.uniqueSectionCode %> </h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
+    <th>Average Grade</th>
     <th></th>
   </tr>
 
   <% @students.each do |student| %>
       <tr class=".student-row">
-        <td><%= student.name.lastSurname %></td>
+        <td><%= full_name(student) %></td>
+        <td><%= student.average_grade %></td>
         <td width="100%">
-          <div class="progressBar" data-progress="70"></div>
+          <div class="progressBar" data-progress="<%= student.average_grade %>"></div>
         </td>
         <td width="100%" class="hide alert-button">
           <a href="#" class="btn">Alert Parents</a>
