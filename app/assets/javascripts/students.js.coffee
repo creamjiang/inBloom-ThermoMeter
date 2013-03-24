@@ -1,6 +1,6 @@
 jQuery ->
   # performanceColor is derived in js
-  $('.sparklines.average_score1').sparkline('html', {
+  $('.sparklines.average_score').sparkline('html', {
     type:'bullet',
     tagValuesAttribute: 'data-values',
     height: '30px',

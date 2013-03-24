@@ -4,11 +4,9 @@
   <tr class='overall'>
     <td>Overall</td>
     <td><%= @section.average_grade %></td>
-    <td>
-      <div class="progressBar" data-progress="<%= @section.average_grade %>"></div>
+    <td class='average_score'>
+      <div class="sparklines average_score" data-values="<%= "80,#{@section.average_grade},100,85,60" %>"></div>
     </td>
-    <td></td>
-    <td></td>
     <td>
       <span class="sparklines grades" data-values="<%= @section.average_grades.join(',') %>"></span>
     </td>
@@ -17,8 +15,6 @@
     <th>Name</th>
     <th>Average Grade</th>
     <th>Performance</th>
-    <th>Performance</th>
-    <th>Performance</th>
     <th>Trends</th>
   </tr>
 
@@ -26,15 +22,17 @@
       <tr class=".student-row">
         <td><%= full_name(student) %></td>
         <td><%= student.average_grade %></td>
-        <td width="100%">
+        <!-- <td width="100%">
           <div class="progressBar" data-progress="<%= student.average_grade %>"></div>
         </td>
+        -->
         <td class="average_score" width="100%">
-          <span class="sparklines average_score1" data-grade="<%= student.average_grade %>" data-values="<%= "80,#{student.average_grade},100,85,60" %>"></span>
+          <span class="sparklines average_score" data-grade="<%= student.average_grade %>" data-values="<%= "80,#{student.average_grade},100,85,60" %>"></span>
         </td>
-        <td width="100%">
+        <!-- <td width="100%">
           <span class="sparklines average_score2" performanceColor="<%= grade_color(student.average_grade) %>" data-values="<%= "80,#{student.average_grade},100,85,60" %>"></span>
         </td>
+        -->
         <td width="100%">
           <span class="sparklines grades" data-values="<%= student.grades.join(',') %>"></span>
         </td>
