@@ -12,14 +12,16 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
-    session[:token] = nil
+    session.delete(:user_id)
+    session.delete(:token)
     redirect_to root_url, :notice => "Signed out!"
   end
 
   def failure
     failure_msg = "Couldn't locate a user with those credentials."
     flash[:failure] = "Sorry, could not log you in"
+    current_user.destroy if current_user
+    @current_user = nil
     session.delete(:user_id)
     session.delete(:token)
     redirect_to(login_url) and return

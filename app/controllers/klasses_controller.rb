@@ -2,7 +2,8 @@ class KlassesController < ApplicationController
   # GET /klasses
   # GET /klasses.json
   def index
-    @klasses = hashie_from_json(inbloom_get('sections'))
+    sections = inbloom_get('sections')
+    @klasses = hashie_from_json(sections)
     teacher_url = href_for(@klasses.first, :getTeachers)
     teacher_json = get(teacher_url)
     @teacher = hashie_from_json(teacher_json).first
