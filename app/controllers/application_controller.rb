@@ -25,7 +25,8 @@ class ApplicationController < ActionController::Base
     logger.debug "API start: #{api_call}, :headers => #{headers}"
     api_start = Time.now
     result = HTTParty.send(:get, api_call.to_s, :headers => headers)
-    logger.debug "API complete. duration:#{api_start-Time.now}"
+    logger.debug "API complete. duration:#{Time.now-api_start}"
+    result
   end
   helper_method :get
 

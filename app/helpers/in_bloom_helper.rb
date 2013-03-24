@@ -21,6 +21,33 @@ module InBloomHelper
     end
   end
 
+  def student_grades(section, students)
+    section_url = href_for(section, :self)
+    section_json = get(section_url)
+    section = hashie_from_json(section_json)
+    all_student_gradebook_entries_url = href_for(section, 'getStudentGradebookEntries')
+    gradebook_entries_url = all_student_gradebook_entries_url
+    gradebook_entries_json = get(gradebook_entries_url)
+    gradebook_entries = hashie_from_json(gradebook_entries_json)
+
+    students_with_grades = {}
+    students.each do |student|
+      entries_for_student = gradebook_entries.select { |entry| entry.studentId == student.id }
+      grades = entries_for_student.collect { |entry| entry.numericGradeEarned || numeric_grade_for(entry.letterGradeEarned) }.compact
+
+      if grades.empty?
+        average_grade = 0
+      else
+        average_grade = (grades.inject(0.0) { |sum, el| sum + el } / grades.size).round
+      end
+
+      students_with_grades[student.id] = {}
+      students_with_grades[student.id][:grades] = grades
+      students_with_grades[student.id][:average_grade] = average_grade
+    end
+    students_with_grades
+  end
+
   def in_bloom_link_to(caption, item, rel)
     link_to caption, href_for(item, rel)
   end

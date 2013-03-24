@@ -1,4 +1,4 @@
-<h1>Students for <%= @student_container.uniqueSectionCode %> </h1>
+<h1>Students for <%= @section.uniqueSectionCode %> </h1>
 
 <table>
   <tr>
@@ -10,8 +10,8 @@
   <% @students.each do |student| %>
       <tr>
         <td><%= full_name(student) %></td>
-        <td><%= average_grade(student, @section) %></td>
-        <td width="100%"><div class="progressBar" data-progress="90"></div></td>
+        <td><%= student.average_grade %></td>
+        <td width="100%"><div class="progressBar" data-progress="<%= student.average_grade %>"></div></td>
       </tr>
   <% end %>
 </table>
