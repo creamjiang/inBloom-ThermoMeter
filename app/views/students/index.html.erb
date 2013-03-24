@@ -40,9 +40,17 @@
         </td>
         <td class="alert-button">
           <% if student.average_grade < 65 %>
-            <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
-              Alert Parents
-            </a>
+            <div class="btn-group">
+              <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
+                Alert Parents
+              </a>
+              <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
+                Alert Administrators
+              </a>
+              <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
+                Alert Student
+              </a>
+            </div>
           <% end %>
         </td>
       </tr>
@@ -51,24 +59,3 @@
 
 <br />
 <%=  debug @students %>
-
-<script type="text/javascript">
-  jQuery(function(){
-
-    $(".progressBar").each(function(){
-      var progVal = $(this).data("progress");
-      $(this).progressbar({
-        value: progVal
-      });
-      if (progVal > 80){
-        $(this).find(".ui-progressbar-value").addClass("highGrade");
-      } else if ((progVal > 65) && (progVal <= 80) ){
-        $(this).find(".ui-progressbar-value").addClass("averageGrade");
-      } else if (progVal <= 65){
-        $(this).find(".ui-progressbar-value").addClass("lowGrade");
-      }
-
-    });
-
-  });
-</script>
