@@ -8,10 +8,15 @@
   </tr>
 
   <% @students.each do |student| %>
-      <tr>
+      <tr class=".student-row">
         <td><%= full_name(student) %></td>
         <td><%= student.average_grade %></td>
-        <td width="100%"><div class="progressBar" data-progress="<%= student.average_grade %>"></div></td>
+        <td width="100%">
+          <div class="progressBar" data-progress="<%= student.average_grade %>"></div>
+        </td>
+        <td width="100%" class="hide alert-button">
+          <a href="#" class="btn">Alert Parents</a>
+        </td>
       </tr>
   <% end %>
 </table>
@@ -33,6 +38,7 @@
         $(this).find(".ui-progressbar-value").addClass("averageGrade");
       } else if (progVal <= 65){
         $(this).find(".ui-progressbar-value").addClass("lowGrade");
+        $(this).parent().parent().find(".alert-button").removeClass("hide");
       }
 
     });
