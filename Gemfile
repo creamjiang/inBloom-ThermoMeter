@@ -26,6 +26,7 @@ end
 gem 'hashie'
 gem 'jquery-rails'
 gem 'debugger'
+gem 'rails-footnotes'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
