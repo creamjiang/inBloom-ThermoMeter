@@ -1,7 +1,6 @@
 
 == Shared Learning Collaborative integration in a Rails App
-This is an exmaple of how to use the omniauth-slc gem to authenticate with SLC API,
-and then use the HTTParty gem to make request to the API.
+This is an example application that integrates with InBloom and shows 'an intervention with communication' application.
 
 To set up a sandbox enviroment for SLC, follow this guide: http://dev.slcedu.org/getting-started/creating-sandbox-account
 
@@ -28,6 +27,8 @@ set your application location to:
 set your callback url to:
   http://localhost:3000/auth/slc/callback
 
+Please check with InBloom.org for the latest api uri's.
+
 
 === Bugs
 This was done quickly and is not perfect.  If you notice a bug, please submit an issue, or even better, fix it and submit a Pull Request.
@@ -38,3 +39,13 @@ This was done quickly and is not perfect.  If you notice a bug, please submit an
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+=== Credits
+1. khoffman4 https://github.com/khoffma4/omniauth-inbloom - for Shell example application and omniauth strategy for Inbloom
+
+=== Copyright
+2013 LearnZillion.com
+
+=== License
+Apache 2.0 license http://www.apache.org/licenses/LICENSE-2.0.html
+
