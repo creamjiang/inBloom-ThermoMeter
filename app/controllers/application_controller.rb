@@ -22,9 +22,13 @@ class ApplicationController < ActionController::Base
                "Authorization" => "bearer #{session[:token]}"}
 
     api_call = URI.parse(path)
-    http_method = request.method.underscore.to_sym
-    HTTParty.send(http_method, api_call.to_s, :headers => headers)
+    logger.debug "API start: #{api_call}, :headers => #{headers}"
+    api_start = Time.now
+    result = HTTParty.send(:get, api_call.to_s, :headers => headers)
+    logger.debug "API complete. duration:#{Time.now-api_start}"
+    result
   end
+  helper_method :get
 
   private
 
@@ -34,6 +38,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # introspects item's links for rel, returns href
   def href_for(item, rel)
     item.links.find {|item| item.rel == rel.to_s}.href
   end
