@@ -1,59 +1,64 @@
 <h1>Students for <%= @section.uniqueSectionCode %> </h1>
 
 <table>
-  <tr class='overall data'>
-    <td>Overall</td>
-    <td><%= @section.average_grade %></td>
-    <td class='average_score'>
-      <div class="sparklines average_score" data-values="<%= "80,#{@section.average_grade},100,80,65" %>"></div>
-    </td>
-    <td class='trends'>
-      <span class="sparklines grades" data-values="<%= @section.average_grades.join(',') %>"></span>
-    </td>
-    <td></td>
-  </tr>
-  <tr><td><!-- style hack: gap below overall --></td></tr>
-  <tr class='header'>
-    <th>Name</th>
-    <th>Average Grade</th>
-    <th>Performance</th>
-    <th>Trend</th>
-    <th>Actions</th>
-  </tr>
-
-  <% @students.each do |student| %>
+  <thead>
+    <tr class='overall data'>
+      <td>Overall</td>
+      <td><%= @section.average_grade %></td>
+      <td class='average_score'>
+        <div class="sparklines average_score" data-values="<%= "80,#{@section.average_grade},100,80,65" %>"></div>
+      </td>
+      <td class='trends'>
+        <span class="sparklines grades" data-values="<%= @section.average_grades.join(',') %>"></span>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><!-- style hack: gap below overall --></td>
+    </tr>
+    <tr class='header'>
+      <th>Name</th>
+      <th>Average Grade</th>
+      <th>Performance</th>
+      <th>Trend</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @students.each do |student| %>
       <tr class=".student-row data">
         <td><%= full_name(student) %></td>
         <td><%= student.average_grade %></td>
         <!-- <td width="100%">
-          <div class="progressBar" data-progress="<%= student.average_grade %>"></div>
-        </td>
-        -->
+            <div class="progressBar" data-progress="<%= student.average_grade %>"></div>
+          </td>
+          -->
         <td class="average_score">
           <span class="sparklines average_score" data-grade="<%= student.average_grade %>" data-values="<%= "80,#{student.average_grade},100,80,65" %>"></span>
         </td>
         <!-- <td width="100%">
-          <span class="sparklines average_score2" performanceColor="<%= grade_color(student.average_grade) %>" data-values="<%= "80,#{student.average_grade},100,85,60" %>"></span>
-        </td>
-        -->
+            <span class="sparklines average_score2" performanceColor="<%= grade_color(student.average_grade) %>" data-values="<%= "80,#{student.average_grade},100,85,60" %>"></span>
+          </td>
+          -->
         <td>
           <span class="sparklines grades" data-values="<%= student.grades.join(',') %>"></span>
         </td>
         <td class="alert-button">
           <% if student.average_grade < 65 %>
-            <div class="btn-group">
-              <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
+              <div class="btn-group">
+                <a href=<%= sendit_alert_path(:name => full_name(student)) %> class="btn">
                 Alert Parents
-              </a>
-              <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
+                </a>
+                <a href=<%= sendit_alert_path(:name => full_name(student)) %> class="btn">
                 Alert Administrators
-              </a>
-              <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
+                </a>
+                <a href=<%= sendit_alert_path(:name => full_name(student)) %> class="btn">
                 Alert Student
-              </a>
-            </div>
+                </a>
+              </div>
           <% end %>
         </td>
       </tr>
-  <% end %>
+    <% end %>
+  </tbody>
 </table>
