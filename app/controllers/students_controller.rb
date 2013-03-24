@@ -9,8 +9,13 @@ class StudentsController < ApplicationController
     @students = hashie_from_json(students_json)
     student_grades = student_grades(@section, @students)
     #assign average grade
-    @students.each {|student| student.average_grade = student_grades[student.id][:average_grade]}
-    @students
+    @students.each do |student|
+      student.average_grade = student_grades[student.id][:average_grade]
+      student.grades = student_grades[student.id][:grades]
+    end
+    @section.average_grade = 70
+    @section.average_grades = [70,80,60,70]
+
   end
 
 end
