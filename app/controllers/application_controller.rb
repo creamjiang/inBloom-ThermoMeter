@@ -33,4 +33,9 @@ class ApplicationController < ActionController::Base
       redirect_to "/auth/slc"
     end
   end
+
+  def href_for(item, rel)
+    item.links.find {|item| item.rel == rel}.href
+  end
+  helper_method :href_for
 end
