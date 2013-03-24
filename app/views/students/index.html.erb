@@ -40,7 +40,9 @@
         </td>
         <td class="alert-button">
           <% if student.average_grade < 65 %>
-              <a href="#" class="btn">Alert Parents</a>
+            <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
+              Alert Parents
+            </a>
           <% end %>
         </td>
       </tr>
