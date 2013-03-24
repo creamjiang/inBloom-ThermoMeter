@@ -11,7 +11,6 @@ class StudentsController < ApplicationController
     #assign average grade
     @students.each {|student| student.average_grade = student_grades[student.id][:average_grade]}
     @students
-
   end
 
 end

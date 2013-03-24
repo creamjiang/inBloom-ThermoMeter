@@ -15,7 +15,9 @@
           <div class="progressBar" data-progress="<%= student.average_grade %>"></div>
         </td>
         <td width="100%" class="hide alert-button">
-          <a href="#" class="btn">Alert Parents</a>
+          <a href= <%= sendit_alert_path(:name => full_name(student)) %> class="btn">
+            Alert Parents
+          </a>
         </td>
       </tr>
   <% end %>
