@@ -17,4 +17,12 @@ class SessionsController < ApplicationController
     redirect_to root_url, :notice => "Signed out!"
   end
 
+  def failure
+    failure_msg = "Couldn't locate a user with those credentials."
+    flash[:failure] = "Sorry, could not log you in"
+    session.delete(:user_id)
+    session.delete(:token)
+    redirect_to(login_url) and return
+  end
+
 end
