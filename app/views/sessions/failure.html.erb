@@ -1,0 +1,11 @@
+<h2>oAuth autologin error</h2>
+
+This can occur if you had previously logged into InBloom api, portal or admin under a different application. The previous session/application appears to conflict with current session.
+<br/>
+<br/>
+
+Please click <%= link_to 'here', APP_CONFIG['InbloomPortalUrl'], :target => "_blank" %>, and the page will open in a new tab. When logout/exit options are presented, then completely logout from all pages presented.
+
+<br/>
+<br/>
+After completing above steps, you can <%= link_to 'retry here', login_url %>.

@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"delete",
+				"delete_all_cookies"
+			],
+			[
+				"Auth",
+				"AuthError"
+			],
+			[
+				"json",
+				"json_data"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"crede",
+				"credential_config"
+			],
+			[
+				"hash",
+				"hashie_from_json"
+			],
+			[
 				"Read",
 				"Read-Aloud"
 			],
@@ -490,35 +514,92 @@
 			[
 				"should",
 				"should_not"
-			],
-			[
-				"en",
-				"enrollment"
-			],
-			[
-				"name",
-				"nameofclass"
-			],
-			[
-				"question",
-				"question_id"
-			],
-			[
-				"hidden",
-				"hidden_field"
-			],
-			[
-				"q",
-				"question"
-			],
-			[
-				"due",
-				"due_on_applicable"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/controllers/sessions_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1175,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/alerts_controller.rb",
+			"settings":
+			{
+				"buffer_size": 413,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/alerts/sendit.html.erb",
+			"settings":
+			{
+				"buffer_size": 57,
+				"line_ending": "Unix",
+				"name": "got here"
+			}
+		},
+		{
+			"file": "app/views/students/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 2325,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 404,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/students_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/ib_twilio.rb",
+			"settings":
+			{
+				"buffer_size": 1198,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".credentials.yml",
+			"settings":
+			{
+				"buffer_size": 366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.rdoc",
+			"settings":
+			{
+				"buffer_size": 1929,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 3004,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -544,6 +625,29 @@
 	},
 	"file_history":
 	[
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/controllers/klasses_controller.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/lib/exceptions.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/controllers/application_controller.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/config/initializers/session_store.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/config/initializers/omniauth.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/views/layouts/application.html.erb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/config/routes.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/controllers/sessions_controller.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/.credentials.yml",
+		"/Users/sushantmohanty/LZ/dev/inbloom/lib/secure_keys.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/models/ib_twilio.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/README.rdoc",
+		"/Users/sushantmohanty/LZ/dev/inbloom/Gemfile",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/assets/javascripts/application.js",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/assets/stylesheets/bootstrap_and_overrides.css.less",
+		"/Users/sushantmohanty/LZ/dev/inbloom/config/application.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/assets/stylesheets/bootstrap_and_overrides.css",
+		"/Users/sushantmohanty/LZ/dev/inbloom/config/environments/development.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/config/environments/production.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/config/environment.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/controllers/students_controller.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/app/models/user.rb",
+		"/Users/sushantmohanty/LZ/dev/inbloom/config/config.yml",
 		"/Users/sushantmohanty/LZ/dev/lrnzprod2/doc/release.md",
 		"/Users/sushantmohanty/LZ/dev/lrnzprod2/db/migrate/20130230031718_move_assignable_filter_to_user.rb",
 		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/views/api/mini_units/show.rabl",
@@ -648,30 +752,7 @@
 		"/Users/sushantmohanty/LZ/dev/lrnzprod2/spec/norails_spec_helper.rb",
 		"/Users/sushantmohanty/LZ/dev/temp/echo.rb",
 		"/Users/sushantmohanty/LZ/dev/lrnzprod2/doc/release_features.md",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/config/deploy/staging.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/spec/factories/students.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/config/application.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/models/answer.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/models/document.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/student/assignments_controller.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/config/initializers/session_store.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/sessions_controller.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/views/api/teacher/assignables/show.rabl",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/views/api/teacher/assignables/index.rabl",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/helpers/edmodo_helper.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/models/event_journal.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/config/initializers/ar_soft_column_finders.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/models/edmodo.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/db/seeds/production/SearchSummary.csv",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/config/serverconfig/api/nginx.conf",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/student/base_controller.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/tools_controller.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/concerns/website_common.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/api/notifications_controller.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/concerns/static_pages.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/lib/shared_controller.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/internal_api_controller.rb",
-		"/Users/sushantmohanty/LZ/dev/lrnzprod2/app/controllers/pages_controller.rb"
+		"/Users/sushantmohanty/LZ/dev/lrnzprod2/config/deploy/staging.rb"
 	],
 	"find":
 	{
@@ -696,6 +777,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Hashie::Mash",
 			"assignable_preview_link",
 			"cookie",
 			"4",
@@ -822,8 +904,7 @@
 			"link_to",
 			"math_question",
 			"standards",
-			"old_form",
-			"enroll_in_klass"
+			"old_form"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -890,8 +971,284 @@
 	"groups":
 	[
 		{
+			"selected": 8,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/sessions_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								887,
+								887
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/alerts_controller.rb",
+					"settings":
+					{
+						"buffer_size": 413,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								322,
+								322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/alerts/sendit.html.erb",
+					"settings":
+					{
+						"buffer_size": 57,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"auto_name": "got here",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/students/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 2325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/students_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/ib_twilio.rb",
+					"settings":
+					{
+						"buffer_size": 1198,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								403,
+								403
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": ".credentials.yml",
+					"settings":
+					{
+						"buffer_size": 366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								255
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "README.rdoc",
+					"settings":
+					{
+						"buffer_size": 1929,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1366,
+								1366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 205.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 3004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2728,
+								2728
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -979,6 +1336,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 162.0,
+	"side_bar_width": 288.0,
 	"status_bar_visible": true
 }

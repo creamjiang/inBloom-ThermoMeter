@@ -1,5 +1,7 @@
 defaults: &defaults
-  dummyVar:
+  InbloomPortalUrl: 'https://portal.sandbox.inbloom.org/portal'
+  InbloomAPIUrl: 'https://api.sandbox.slcedu.org'  # not yet used
+
 
 development: &development
   <<: *defaults
