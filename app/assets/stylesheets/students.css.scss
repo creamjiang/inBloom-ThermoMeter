@@ -9,10 +9,15 @@ th {
 
 tr.data td {
   border:  dotted lightgray 1px;
+  line-height: 30px;
 }
 
-td.average_score, td.trends {
-  line-height: 30px;
+td.average_score {
+  width: 50%;
+}
+
+td.trends {
+  width: 15%;
 }
 
 .overall {
