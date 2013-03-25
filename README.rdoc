@@ -1,5 +1,5 @@
 
-== Shared Learning Collaborative integration in a Rails App
+== InBloom integration in Rails - sample app Inbloom Thermometer (1st place winner Camp NC - spring 2013)
 This is an example application that integrates with InBloom and shows 'an intervention with communication' application.
 
 To set up a sandbox enviroment for SLC, follow this guide: http://dev.slcedu.org/getting-started/creating-sandbox-account
@@ -27,11 +27,11 @@ set your application location to:
 set your callback url to:
   http://localhost:3000/auth/slc/callback
 
-Please check with InBloom.org for the latest api uri's.
-
+Please check with InBloom.org for the latest urls, they may change..
 
 === Bugs
 This was done quickly and is not perfect.  If you notice a bug, please submit an issue, or even better, fix it and submit a Pull Request.
+
 === Contributing
 
 1. Fork it
