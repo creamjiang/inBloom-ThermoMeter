@@ -2,8 +2,23 @@ if APP_CONFIG['mock_in_bloom']
   require 'webmock'
   include WebMock::API
 
+  Range.class_eval do
+    def numeric?
+      first.is_a?(Numeric)
+    end
+
+    # Returns random item from range
+    # Note: inefficient, only use for small ranges
+    def sample
+      self.to_a.sample
+    end
+  end
+
 #stub_request(:any, 'https://api.sandbox.slcedu.org/api/rest/v1/sections')
 #stub_request(:any, "https://api.sandbox.slcedu.org/api/oauth/authorize?response_type=code&client_id=FhedRG00Tk&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fslc%2Fcallback&state=25e9bee39fdc7d93e62d6122818dedc7e0b04ded37df9afb")
+  def sections
+    @sections ||= {id: 'SECTION_1'}
+  end
 
   stub_request(:get, "https://api.sandbox.slcedu.org/api/rest/v1/sections").
       with(:headers => {'Accept' => 'application/vnd.slc+json', 'Authorization' => 'bearer', 'Content-Type' => 'application/vnd.slc+json'}).
@@ -59,14 +74,32 @@ if APP_CONFIG['mock_in_bloom']
                 ].to_json,
                 :headers => {})
 
+  def make_all_student_grades(sections, count_per_section = 4)
+    students = {
+        'STUDENT_HP' => {grade_range: (78..92)},
+        'STUDENT_HG' => {grade_range: (92..100)},
+        'STUDENT_RW' => {grade_range: (70..84)},
+        'STUDENT_VC' => {grade_range: ('D'..'F')},
+    }
+    grades = []
+    sections.each do |section|
+      count_per_section.times do
+        students.each do |student_id, student_data|
+          grades << make_student_grade(student_id, section, student_data[:grade_range])
+        end
+      end
+    end
+    grades
+  end
+
+  def make_student_grade(student_id, section_id, grade_range)
+    grade_type = grade_range.numeric? ? :numericGradeEarned : :letterGradeEarned
+    {studentId: student_id, sectionId: section_id, grade_type => grade_range.sample}
+  end
+
   stub_request(:get, "http://example.com/student_gradebook_entries").
       with(:headers => {'Accept' => 'application/vnd.slc+json', 'Authorization' => 'bearer', 'Content-Type' => 'application/vnd.slc+json'}).
       to_return(:status => 200,
-                :body => [
-                    {studentId: 'STUDENT_HP', sectionId: 'SECTION1', numericGradeEarned: 88},
-                    {studentId: 'STUDENT_HG', sectionId: 'SECTION1', numericGradeEarned: 99},
-                    {studentId: 'STUDENT_RW', sectionId: 'SECTION1', numericGradeEarned: 76},
-                    {studentId: 'STUDENT_VC', sectionId: 'SECTION1', letterGradeEarned: 'E'},
-                ].to_json,
+                :body => make_all_student_grades(sections, 10).to_json,
                 :headers => {})
 end
