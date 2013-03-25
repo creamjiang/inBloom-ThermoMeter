@@ -41,10 +41,11 @@ This was done quickly and is not perfect.  If you notice a bug, please submit an
 5. Create a new Pull Request
 
 === Credits
-1. khoffman4 https://github.com/khoffma4/omniauth-inbloom - for Shell example application and omniauth strategy for Inbloom
+- khoffman4 https://github.com/khoffma4/omniauth-inbloom - for omniauth strategy used for Inbloom & example app
+- Nick Papacostas, Matt Scillipoti, and Sushant Mohanty - developers from LearnZillion, Inc.
 
 === Copyright
-2013 LearnZillion.com
+2013 LearnZillion, Inc.
 
 === License
 Apache 2.0 license http://www.apache.org/licenses/LICENSE-2.0.html
