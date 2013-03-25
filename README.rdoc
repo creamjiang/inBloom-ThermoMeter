@@ -28,6 +28,7 @@ To use this app you will need to export environment variables
 
  You may also store these as YML in a file called `.credentials.yml` (this file should not be shared or in git)
 
+Skip inBloom api calls by setting `mock_in_bloom: true` in config.yml
 
 When you create an application as described in "registering your application" at http://dev.slcedu.org/getting-started/creating-sandbox-account
 

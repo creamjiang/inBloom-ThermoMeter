@@ -14,7 +14,7 @@ gem 'sqlite3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails', '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -33,11 +33,12 @@ gem 'jquery-ui-rails'
 gem 'twilio-ruby'
 
 group :development, :test do
-	gem 'hirb'
-	gem 'wirble'
-	gem 'debugger'
-	gem 'rails-footnotes'
-	gem 'thin'
+  gem 'hirb'
+  gem 'wirble'
+  gem 'debugger'
+  gem 'rails-footnotes'
+  gem 'thin'
+  gem 'webmock'
 end
 
 # To use ActiveModel has_secure_password

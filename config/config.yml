@@ -3,3 +3,4 @@ defaults: &defaults
 
 development: &development
   <<: *defaults
+  mock_in_bloom: true

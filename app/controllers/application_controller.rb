@@ -28,6 +28,7 @@ class ApplicationController < ActionController::Base
     api_call = URI.parse(path)
     logger.debug "API start: #{api_call}, :headers => #{headers}"
     api_start = Time.now
+
     result = HTTParty.send(:get, api_call.to_s, :headers => headers)
     if result.code == 401
       current_user.destroy if current_user
@@ -43,7 +44,12 @@ class ApplicationController < ActionController::Base
 
   def ensure_user
     unless current_user
-      redirect_to "/auth/slc"
+      if APP_CONFIG['mock_in_bloom']
+        auth = {provider: 'foo', uid: 'bar', info: { name: 'baz' }}.with_indifferent_access
+        @current_user = User.create_with_omniauth(auth)
+      else
+        redirect_to "/auth/slc"
+      end
     end
   end
 
