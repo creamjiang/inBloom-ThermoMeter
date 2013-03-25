@@ -33,9 +33,6 @@ module InBloomHelper
   end
 
   def student_grades(section, students)
-    section_url = href_for(section, :self)
-    section_json = get(section_url)
-    section = hashie_from_json(section_json)
     all_student_gradebook_entries_url = href_for(section, 'getStudentGradebookEntries')
     gradebook_entries_url = all_student_gradebook_entries_url
     gradebook_entries_json = get(gradebook_entries_url)
