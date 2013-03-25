@@ -20,6 +20,12 @@ jQuery ->
   })
   $('.sparklines.grades').sparkline('html', {
     tagValuesAttribute: 'data-values',
+    chartRangeMax: 100,
+    chartRangeMin: 50,
+    fillColor: false,
+    normalRangeColor: 'CCFFCC',
+    normalRangeMax: 93,
+    normalRangeMin:76,
     height: '30px',
     width: '100%'
   })
