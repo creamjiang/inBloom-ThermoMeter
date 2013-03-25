@@ -1,8 +1,8 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :slc, get_env('INBLOOM_KEY'), get_env('INBLOOM_SECRET'), :setup => lambda { |env| 
-     env['omniauth.strategy'].options[:client_options].site = 'https://api.sandbox.slcedu.org'
+     env['omniauth.strategy'].options[:client_options].site = APP_CONFIG['InbloomAPIUrl']
   }
-  raise "InBloom Sandbox Key or Secret missing" unless get_env('INBLOOM_KEY') && get_env('INBLOOM_SECRET')
+  raise "InBloom Sandbox Key, Secret, or API url missing" unless get_env('INBLOOM_KEY') && get_env('INBLOOM_SECRET') && APP_CONFIG['InbloomAPIUrl']
 end
 
 # override default behavior - bit of monkey patch to allow testing in localhost

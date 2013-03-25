@@ -1,7 +1,12 @@
 defaults: &defaults
   InbloomPortalUrl: 'https://portal.sandbox.inbloom.org/portal'
-  InbloomAPIUrl: 'https://api.sandbox.slcedu.org'  # not yet used
+  InbloomAPIUrl: 'https://api.sandbox.slcedu.org'
 
+development:
+  <<: *defaults
 
-development: &development
+staging:
+  <<: *defaults
+
+production:
   <<: *defaults
