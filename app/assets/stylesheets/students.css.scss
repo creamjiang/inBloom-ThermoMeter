@@ -1,3 +1,7 @@
+table, tr {
+  width:  100%;
+}
+// zebra striping
 table tbody tr:nth-child(2n+2) td {
   background-color: #EBF5FF;
 }
@@ -12,12 +16,15 @@ tr.data td {
   line-height: 30px;
 }
 
-td.average_score {
-  width: 50%;
+// sparklines does not play well with Percentage width
+th.average_score, td.average_score {
+  min-width: 100px;
+  width: 260px;
 }
 
-td.trends {
-  width: 15%;
+th.trends, td.trends {
+  min-width: 70px;
+  width:  90px;
 }
 
 .overall {
