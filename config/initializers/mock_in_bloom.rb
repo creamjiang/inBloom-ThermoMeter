@@ -40,10 +40,22 @@ if APP_CONFIG['mock_in_bloom']
       with(:headers => {'Accept' => 'application/vnd.slc+json', 'Authorization' => 'bearer', 'Content-Type' => 'application/vnd.slc+json'}).
       to_return(:status => 200,
                 :body => [
-                    {id: 'STUDENT1',
+                    {id: 'STUDENT_HP',
                      name: {lastSurname: 'Potter', firstName: 'Harry'},
-                     links: [rel: 'getStudentGradebookEntries', href: 'http://example.com/student_gradebook_entries']
-                    }
+                     links: [rel: 'getStudentGradebookEntries', href: 'http://example.com/student_gradebook_entries?studentId=STUDENT_HP']
+                    },
+                    {id: 'STUDENT_HG',
+                     name: {lastSurname: 'Granger', firstName: 'Hermione'},
+                     links: [rel: 'getStudentGradebookEntries', href: 'http://example.com/student_gradebook_entries?studentId=STUDENT_HG']
+                    },
+                    {id: 'STUDENT_RW',
+                     name: {lastSurname: 'Weasley', firstName: 'Ron'},
+                     links: [rel: 'getStudentGradebookEntries', href: 'http://example.com/student_gradebook_entries?studentId=STUDENT_RW']
+                    },
+                    {id: 'STUDENT_VC',
+                     name: {lastSurname: 'Crabb', firstName: 'Vincent'},
+                     links: [rel: 'getStudentGradebookEntries', href: 'http://example.com/student_gradebook_entries?studentId=STUDENT_VC']
+                    },
                 ].to_json,
                 :headers => {})
 
@@ -51,7 +63,10 @@ if APP_CONFIG['mock_in_bloom']
       with(:headers => {'Accept' => 'application/vnd.slc+json', 'Authorization' => 'bearer', 'Content-Type' => 'application/vnd.slc+json'}).
       to_return(:status => 200,
                 :body => [
-                    {studentId: 'STUDENT1', sectionId: 'SECTION1', numericGradeEarned: 89}
+                    {studentId: 'STUDENT_HP', sectionId: 'SECTION1', numericGradeEarned: 88},
+                    {studentId: 'STUDENT_HG', sectionId: 'SECTION1', numericGradeEarned: 99},
+                    {studentId: 'STUDENT_RW', sectionId: 'SECTION1', numericGradeEarned: 76},
+                    {studentId: 'STUDENT_VC', sectionId: 'SECTION1', letterGradeEarned: 'E'},
                 ].to_json,
                 :headers => {})
 end
