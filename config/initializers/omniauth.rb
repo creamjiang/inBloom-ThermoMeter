@@ -1,12 +1,12 @@
 unless APP_CONFIG['mock_in_bloom']
-require 'secure_keys'
+  require 'secure_keys'
 
-Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :slc, SecureKeys.read('INBLOOM_KEY'), SecureKeys.read('INBLOOM_SECRET'), :setup => lambda { |env| 
-     env['omniauth.strategy'].options[:client_options].site = APP_CONFIG['InbloomAPIUrl']
-  }
-  raise "InBloom Sandbox Key, Secret, or API url missing" unless SecureKeys.read('INBLOOM_KEY') && SecureKeys.read('INBLOOM_SECRET') && APP_CONFIG['InbloomAPIUrl']
-end
+  Rails.application.config.middleware.use OmniAuth::Builder do
+    provider :slc, SecureKeys.read('INBLOOM_KEY'), SecureKeys.read('INBLOOM_SECRET'), :setup => lambda { |env|
+      env['omniauth.strategy'].options[:client_options].site = APP_CONFIG['InbloomAPIUrl']
+    }
+    raise "InBloom Sandbox Key, Secret, or API url missing" unless SecureKeys.read('INBLOOM_KEY') && SecureKeys.read('INBLOOM_SECRET') && APP_CONFIG['InbloomAPIUrl']
+  end
 end
 
 # override default behavior - bit of monkey patch to allow testing in localhost
