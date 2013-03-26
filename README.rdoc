@@ -43,6 +43,7 @@ This was done quickly and is not perfect.  If you notice a bug, please submit an
 === Credits
 - khoffman4 https://github.com/khoffma4/omniauth-inbloom - for omniauth strategy used for Inbloom & example app
 - Nick Papacostas, Matt Scillipoti, and Sushant Mohanty - developers from LearnZillion, Inc.
+- Dave Richards, Educator partner in the project, English teacher, NC
 
 === Copyright
 2013 LearnZillion, Inc.
