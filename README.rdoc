@@ -15,7 +15,7 @@ The teacher wanted to get an idea of a student's progress at a glance.
 
 === Setup
 
-To set up a sandbox enviroment for SLC, follow this guide: http://dev.slcedu.org/getting-started/creating-sandbox-account
+To set up a sandbox enviroment for inBloom, follow this guide: http://dev.slcedu.org/getting-started/creating-sandbox-account
 
 To use this app you will need to export environment variables
    export INBLOOM_KEY=YOUR KEY
@@ -53,14 +53,12 @@ This was done quickly and is not perfect.  If you notice a bug, please submit an
 5. Create a new Pull Request
 
 === Credits
-* Dave Roberts: Educator
-* Sushant Mohanty: Developer
-* Nick Papacostas: Developer
-* Matt Scilipoti: Developer
-* khoffman4: https://github.com/khoffma4/omniauth-inbloom - for Shell example application and omniauth strategy for Inbloom
+- Dave Roberts: Educator & Visionary
+- khoffman4 https://github.com/khoffma4/omniauth-inbloom - for example app and omniauth-inbloom strategy
+- Nick Papacostas, Matt Scilipoti, and Sushant Mohanty - developers from LearnZillion, Inc.
 
 === Copyright
-2013 LearnZillion.com
+2013 LearnZillion, Inc.
 
 === License
 Apache 2.0 license http://www.apache.org/licenses/LICENSE-2.0.html
