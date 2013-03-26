@@ -1,6 +1,13 @@
 defaults: &defaults
-  dummyVar:
+  InbloomPortalUrl: 'https://portal.sandbox.inbloom.org/portal'
+  InbloomAPIUrl: 'https://api.sandbox.slcedu.org'
 
-development: &development
+development:
   <<: *defaults
   mock_in_bloom: true
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults
